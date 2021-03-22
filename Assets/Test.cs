@@ -8,7 +8,7 @@ public class Boss
 
     public void Magic()
     {
-        if(this.mp >5)
+        if(this.mp >= 5)
         {
             this.mp -= 5;
             Debug.Log("魔法攻撃をした。残りMPは" + this.mp);
@@ -51,18 +51,11 @@ public class Test : MonoBehaviour
         Boss lastboss = new Boss();
 
         // 攻撃用の関数を呼び出す
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
-        lastboss.Magic();
 
+        for (int j = 0; j < 11; j++)
+        {
+            lastboss.Magic();
+        }
     }
 
 
